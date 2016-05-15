@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Navigator2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="firstViewController" customModule="Navigator2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -33,7 +33,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="e24-sm-pCv" kind="show" id="MRU-lQ-408"/>
+                                    <segue destination="e24-sm-pCv" kind="show" id="E5i-pH-rdt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xej-j9-Sjb">
@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="249" y="391"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="l2K-CP-0gm">
             <objects>
-                <viewController id="L8Q-SZ-hYm" sceneMemberID="viewController">
+                <viewController id="L8Q-SZ-hYm" customClass="secondViewController" customModule="Navigator2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZLh-cm-FHs"/>
                         <viewControllerLayoutGuide type="bottom" id="sq2-Uf-u52"/>
@@ -138,11 +138,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dz3-kG-BZG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkr-DZ-Wag">
+                                <rect key="frame" x="270" y="517" width="62" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Process"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Jkr-DZ-Wag" firstAttribute="centerX" secondItem="bUo-ei-iZf" secondAttribute="centerX" constant="1" id="KlO-Oq-UHd"/>
                             <constraint firstItem="bvz-Hz-MNr" firstAttribute="leading" secondItem="bUo-ei-iZf" secondAttribute="leadingMargin" constant="-20" id="Pj1-Ou-FjJ"/>
                             <constraint firstItem="dz3-kG-BZG" firstAttribute="top" secondItem="x6q-Pe-9ik" secondAttribute="bottom" constant="-20" id="RAd-5o-6Bj"/>
+                            <constraint firstItem="Jkr-DZ-Wag" firstAttribute="top" secondItem="dz3-kG-BZG" secondAttribute="bottom" constant="-83" id="Vgz-GQ-ke5"/>
                             <constraint firstItem="dz3-kG-BZG" firstAttribute="leading" secondItem="bUo-ei-iZf" secondAttribute="leadingMargin" constant="-20" id="WUt-3I-KZr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bvz-Hz-MNr" secondAttribute="trailing" constant="-20" id="X03-uv-cgV"/>
                             <constraint firstItem="mOw-PG-1dU" firstAttribute="top" secondItem="bvz-Hz-MNr" secondAttribute="bottom" id="cZU-h7-Fjo"/>
@@ -156,8 +163,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cameraImage" destination="bvz-Hz-MNr" id="N22-L7-v58"/>
-                        <outlet property="tempImageView" destination="dz3-kG-BZG" id="Qq6-j0-lfi"/>
+                        <outlet property="cameraImage" destination="bvz-Hz-MNr" id="MVB-1t-mc9"/>
+                        <outlet property="tempImageView" destination="dz3-kG-BZG" id="R30-1g-KWe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IuL-H2-KNW" userLabel="First Responder" sceneMemberID="firstResponder"/>

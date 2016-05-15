@@ -8,15 +8,16 @@
 
 import UIKit
 import AVFoundation
-import GPUImage
+
 
 
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+
+    
     
     @IBOutlet weak var cameraImage: UIView!
-    
     var captureSession = AVCaptureSession()
     var stillImageOutput = AVCaptureStillImageOutput()
     var previewLayer = AVCaptureVideoPreviewLayer()
@@ -64,6 +65,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     
+
     @IBOutlet weak var tempImageView: UIImageView!
     func didPressTakePhoto() {
         if let videoConnection = stillImageOutput.connectionWithMediaType(AVMediaTypeVideo) {
@@ -83,9 +85,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.tempImageView.image = image
                     self.tempImageView.hidden = false
                     
-                    
-                    
-                }
+                 }
             })
         }
         
@@ -110,6 +110,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         didPressTakeAnother()
     }
+    
+    
     
     
 }
